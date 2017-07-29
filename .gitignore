@@ -1,3 +1,6 @@
+# Built files.
+.next
+
 # Logs
 logs
 *.log

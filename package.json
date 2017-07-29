@@ -1,15 +1,16 @@
 {
-  "name": "with-apollo",
-  "version": "2.0.0",
+  "name": "website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js --production",
     "export": "next export"
   },
   "dependencies": {
-    "material-ui": "^0.18.7",
+    "express": "^4.15.3",
+    "material-ui": "1.0.0-beta.2",
     "next": "^2.4.9",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
