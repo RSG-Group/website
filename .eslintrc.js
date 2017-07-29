@@ -26,6 +26,8 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     // No package.json cross-validation kk bai.
     "import/no-extraneous-dependencies": "off",
-    "import/no-unresolved": "off"
+    "import/extensions": "off",
+    // Update jsx-a11y.
+    "jsx-a11y/href-no-hash": "off"
   }
 };

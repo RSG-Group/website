@@ -1,9 +1,9 @@
 # website
 
-(Un)official RSG-Group website built in Material Design w/ Next.js w/ Apollo (WIP) w/ Preact w/ SSR w/ Babel w/ Redux (MobX under consideration) w/ Flow w/ TypeScript (whew.)
+(Un)official RSG-Group website built in Material Design w/ Next.js w/ Apollo (WIP) w/ Preact w/ SSR w/ Babel w/ Redux (MobX under consideration) w/ Flow (whew.)
 
-Babel, Flow, Next.js, SSR and Redux part built :P
-Work on Preact, TypeScript and Redux going on.
+Babel, Flow, Next.js and SSR part built :P
+Work on Preact and Redux going on.
 Evaluation for MobX, Apollo and GraphQL is going on.
 `website` requires testing.
 
