@@ -2,6 +2,7 @@
 # Following packages ignored due to type errors.
 .*/node_modules/eslint-plugin-jsx-a11y/.*
 .*/node_modules/material-ui/test-utils/.*
+.*/node_modules/material-ui/styles/createGenerateClassName.js.flow.*
 .*/node_modules/mitt/src/.*
 .*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js.*
 .*/node_modules/jss/lib/plugins/RegularRule.js.flow.*
