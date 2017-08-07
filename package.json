@@ -6,7 +6,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "node server.js --production",
-    "export": "next export"
+    "export": "next export",
+    "lint": "xo"
   },
   "dependencies": {
     "express": "^4.15.3",
@@ -25,11 +26,20 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-config-xo-react": "^0.13.0",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.51.1"
+    "flow-bin": "^0.51.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true,
+    "parser": "babel-eslint",
+    "envs": ["es6", "browser"],
+    "plugins": ["react"],
+    "extends": "xo-react/space",
+    "rules": {
+      "quotes": ["error", "double"],
+      "react/forbid-component-props": "off"
+    }
   }
 }
