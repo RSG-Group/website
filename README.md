@@ -1,6 +1,6 @@
 # website
 
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 (Un)official RSG-Group website built in Material Design w/ Next.js w/ Express w/ Apollo (WIP) w/ SSR w/ Babel w/ Redux (MobX under consideration) w/ Flow (whew.)
 
@@ -26,3 +26,8 @@ Start built next.js bundle.
 Create static next.js bundle.
 
 `yarn export` or `npm run export`
+
+## Credits
+@radicho for most of the media and projects in this website.
+
+While not necessary, credits to Chase-san from Wikipedia for an [apt picture](https://commons.wikimedia.org/wiki/File:Line-Line_Intersection.png) for line-intersection.

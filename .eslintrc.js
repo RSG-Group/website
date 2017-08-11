@@ -5,10 +5,5 @@ module.exports = {
   },
   parser: "babel-eslint",
   plugins: ["react"],
-  extends: ["xo-react/space", "xo"],
-  rules: {
-    quotes: ["error", "double"],
-    indent: ["error", 2],
-    "react/forbid-component-props": "off"
-  }
+  extends: ["standard", "standard-react"]
 }

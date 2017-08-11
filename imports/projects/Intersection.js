@@ -11,14 +11,14 @@ export default () => (
     <br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
-        src='https://camo.githubusercontent.com/903b573b18ecf3ca42522712ffd82f018428eba8/687474703a2f2f692e696d6775722e636f6d2f7a5353696f55302e706e67'
+        src='https://upload.wikimedia.org/wikipedia/commons/f/ff/Line-Line_Intersection.png'
         alt='Chess demo.'
         height='105pt'
       />
     </CardMedia>
     <CardContent>
-      <Text type='headline' component='h2'>Chess</Text>
-      <Text component='p'>Cool chess game to play with your friends. (Single player mode WIP)</Text>
+      <Text type='headline' component='h2'>line-intersection</Text>
+      <Text component='p'>Simple mini library for finding the intersection of a line or line segment.</Text>
     </CardContent>
     <CardActions>
       <Button
@@ -26,7 +26,7 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/Chess#rsg-chess'
+        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection#simple-mini-library-for-finding-line-and-line-segment-intersection'
       >Readme
       </Button>
       <Button
@@ -34,10 +34,10 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/Chess'
+        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection'
       >Repository
       </Button>
-      <Link href='/chess' prefetch><Button dense color='primary'>Demo</Button></Link>
+      <Link href='/intersection' prefetch><Button dense color='primary'>Website</Button></Link>
     </CardActions>
   </Card>
 )
