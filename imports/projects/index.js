@@ -6,15 +6,14 @@ import Chess from './Chess'
 import Intersection from './Intersection'
 // Get React.
 import React from 'react'
+// material-ui Grid for responsive layout.
+import Grid from 'material-ui/Grid'
 
 export default () => (
-  <div style={{display: 'flex'}}>
-    <RSGComponents />
-    <div style={{width: '1%'}} />
-    <HyperBackground />
-    <div style={{width: '1%'}} />
-    <Chess />
-    <div style={{width: '1%'}} />
-    <Intersection />
-  </div>
+  <Grid container>
+    <Grid item xs><RSGComponents /></Grid>
+    <Grid item xs><HyperBackground /></Grid>
+    <Grid item xs><Chess /></Grid>
+    <Grid item xs><Intersection /></Grid>
+  </Grid>
 )

@@ -7,11 +7,11 @@ import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} f
 import Link from 'next/link'
 
 export default () => (
-  <Card style={{width: '24%'}} raised>
+  <Card raised>
     <br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
-        src='https://camo.githubusercontent.com/903b573b18ecf3ca42522712ffd82f018428eba8/687474703a2f2f692e696d6775722e636f6d2f7a5353696f55302e706e67'
+        src='/static/chess.png'
         alt='Chess demo.'
         height='105pt'
       />

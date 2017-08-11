@@ -7,11 +7,11 @@ import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} f
 import Link from 'next/link'
 
 export default () => (
-  <Card style={{width: '24%'}} raised>
+  <Card raised>
     <br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
-        src='https://upload.wikimedia.org/wikipedia/commons/f/ff/Line-Line_Intersection.png'
+        src='/static/line-intersection.png'
         alt='Chess demo.'
         height='105pt'
       />
@@ -37,7 +37,7 @@ export default () => (
         href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection'
       >Repository
       </Button>
-      <Link href='/intersection' prefetch><Button dense color='primary'>Website</Button></Link>
+      <Link href='/intersection' prefetch><Button dense color='primary'>Webpage</Button></Link>
     </CardActions>
   </Card>
 )

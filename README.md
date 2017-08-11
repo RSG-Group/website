@@ -28,6 +28,6 @@ Create static next.js bundle.
 `yarn export` or `npm run export`
 
 ## Credits
-@radicho for most of the media and projects in this website.
+@Radi123 for most of the media and projects in this website.
 
 While not necessary, credits to Chase-san from Wikipedia for an [apt picture](https://commons.wikimedia.org/wiki/File:Line-Line_Intersection.png) for line-intersection.

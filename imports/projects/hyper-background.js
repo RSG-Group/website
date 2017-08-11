@@ -5,11 +5,11 @@ import React from 'react'
 import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} from 'material-ui'
 
 export default () => (
-  <Card style={{width: '24%'}} raised>
+  <Card raised>
     <br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
-        src='https://s2.postimg.org/44mp8pj21/Screenshot_from_2017-08-07_13-50-38.png'
+        src='/static/hyper-background.png'
         alt='Hyper with hyper-aurora theme and a background added via hyper-background. Pure ZSH theme in use.'
       />
     </CardMedia>

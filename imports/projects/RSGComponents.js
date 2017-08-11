@@ -5,11 +5,11 @@ import React from 'react'
 import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} from 'material-ui'
 
 export default () => (
-  <Card style={{width: '24%'}} raised>
+  <Card raised>
     <br /><br /><br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
-        src='https://cdn.rawgit.com/RSG-Group/rsg-components/7ba330af/images/xxl_button.png'
+        src='/static/rsg-components.png'
         alt='A button in RSG-Components.'
       />
     </CardMedia>
