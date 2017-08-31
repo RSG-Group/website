@@ -26,7 +26,7 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection#simple-mini-library-for-finding-line-and-line-segment-intersection'
+        href='https://github.com/RSG-Group/website/tree/master/extras/intersection#line-intersection'
       >Readme
       </Button>
       <Button
@@ -34,7 +34,7 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection'
+        href='https://github.com/RSG-Group/website/tree/master/extras/intersection'
       >Repository
       </Button>
       <Link href='/intersection' prefetch><Button dense color='primary'>Webpage</Button></Link>

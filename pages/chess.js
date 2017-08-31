@@ -10,6 +10,6 @@ export default () => (
   <div>
     <Header title='Chess - RSG-Group' />
     {/* Unmaintable code linked here. */}
-    <iframe src='http://rsg-group.github.io/Chess/index.html' height='500em' width='100%' frameBorder='0' />
+    <iframe src='http://rsg-group.github.io/Chess/index.html' height='580px' width='100%' frameBorder='0' />
   </div>
 )

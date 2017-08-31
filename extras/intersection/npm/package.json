@@ -1,0 +1,22 @@
+{
+  "name": "line-intersection",
+  "version": "1.0.7",
+  "description": "Package that shows the intersection between 2 lines or line segments.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RSG-Group/website"
+  },
+  "author": "Radi Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSG-Group/website/issues"
+  },
+  "homepage": "https://rsg-group.github.io/intersection/",
+  "keywords": [
+    "javascript",
+    "math",
+    "line",
+    "intersection"
+  ]
+}

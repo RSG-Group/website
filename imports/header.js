@@ -36,6 +36,7 @@ export default class Header extends React.Component<void, Props, State> {
           <title>{this.props.title}</title>
           <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <link rel='icon' href='/static/favicon.ico' />
         </Head>
         <Drawer open={this.state.drawerOpen} onRequestClose={closeOrOpenDrawer}>
           <List style={{
@@ -50,6 +51,7 @@ export default class Header extends React.Component<void, Props, State> {
         <AppBar position='fixed'>
           <Toolbar>
             <IconButton color='contrast' onClick={closeOrOpenDrawer}><MenuIcon /></IconButton>
+            <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40 }} />
             <Text type='title' color='inherit'>RSG-Group</Text>
             <div style={{flex: 1}} />
             <Button
@@ -58,8 +60,8 @@ export default class Header extends React.Component<void, Props, State> {
               rel='noopener noreferrer'
               href='https://github.com/RSG-Group/website'
               color='contrast'
-        >Fork Me
-        </Button>
+            >Fork Me
+            </Button>
             <a href='https://github.com/RSG-Group' title='Our GitHub Page' target='_blank' rel='noopener noreferrer'>
               <IconButton color='contrast'><GitHubLogo /></IconButton>
             </a>
