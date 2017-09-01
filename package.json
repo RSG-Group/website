@@ -6,11 +6,10 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "node server.js --production",
-    "export": "next export",
-    "lint": "eslint . && flow check",
-    "deploy": "next build && next export -o docs && nodetouch docs/.nojekyll"
+    "lint": "eslint . && flow check"
   },
   "dependencies": {
+    "compression": "^1.7.0",
     "express": "^4.15.3",
     "material-ui": "1.0.0-beta.2",
     "material-ui-icons": "^1.0.0-alpha.19",
@@ -23,8 +22,8 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-babili": "^0.1.4",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-minify": "^0.2.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.4.1",
@@ -35,7 +34,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1",
-    "flow-bin": "^0.52.0",
-    "touch": "^3.1.0"
+    "flow-bin": "^0.52.0"
+  },
+  "now": {
+    "alias": "rsg-group"
   }
 }

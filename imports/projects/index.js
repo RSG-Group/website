@@ -4,6 +4,7 @@ import RSGComponents from './RSGComponents'
 import HyperBackground from './hyper-background'
 import Chess from './Chess'
 import Intersection from './Intersection'
+import ChessMobile from './chess-mobile'
 // Get React.
 import React from 'react'
 // material-ui Grid for responsive layout.
@@ -15,5 +16,6 @@ export default () => (
     <Grid item xs><HyperBackground /></Grid>
     <Grid item xs><Chess /></Grid>
     <Grid item xs><Intersection /></Grid>
+    <Grid item xs><ChessMobile /></Grid>
   </Grid>
 )

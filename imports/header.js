@@ -28,15 +28,19 @@ export default class Header extends React.Component<void, Props, State> {
     }
   }
   state: State
+  componentDidMount = () => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.error('Service worker registration failed', err))
+    } else {
+      console.log('Service worker not supported')
+    }
+  }
   render () {
     const closeOrOpenDrawer = () => this.setState({ drawerOpen: !this.state.drawerOpen })
     return (
       <div>
         <Head>
           <title>{this.props.title}</title>
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <link rel='icon' href='/static/favicon.ico' />
         </Head>
         <Drawer open={this.state.drawerOpen} onRequestClose={closeOrOpenDrawer}>
           <List style={{
@@ -45,13 +49,15 @@ export default class Header extends React.Component<void, Props, State> {
           }}>
             <Link prefetch href='/'><ListItem button><ListItemText primary='Home' /></ListItem></Link>
             <Link prefetch href='/chess'><ListItem button><ListItemText primary='Chess' /></ListItem></Link>
-            <Link prefetch href='/intersection'><ListItem button><ListItemText primary='Intersection' /></ListItem></Link>
           </List>
         </Drawer>
-        <AppBar position='fixed'>
+        <AppBar position='fixed' style={{
+          backgroundColor: '#08AEEA',
+          backgroundImage: 'linear-gradient(0deg, #08AEEA 0%, #2AF598 100%)'
+        }}>
           <Toolbar>
-            <IconButton color='contrast' onClick={closeOrOpenDrawer}><MenuIcon /></IconButton>
-            <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40 }} />
+            <IconButton color='contrast' onClick={closeOrOpenDrawer} aria-label='Navigation Menu'><MenuIcon /></IconButton>
+            <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40 }} alt='' />
             <Text type='title' color='inherit'>RSG-Group</Text>
             <div style={{flex: 1}} />
             <Button
@@ -63,7 +69,7 @@ export default class Header extends React.Component<void, Props, State> {
             >Fork Me
             </Button>
             <a href='https://github.com/RSG-Group' title='Our GitHub Page' target='_blank' rel='noopener noreferrer'>
-              <IconButton color='contrast'><GitHubLogo /></IconButton>
+              <IconButton color='contrast' aria-label='Our GitHub Page'><GitHubLogo /></IconButton>
             </a>
           </Toolbar>
         </AppBar>

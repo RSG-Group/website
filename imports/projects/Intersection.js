@@ -3,8 +3,6 @@
 import React from 'react'
 // Get Material UI.
 import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} from 'material-ui'
-// Get Link to route to the demo.
-import Link from 'next/link'
 
 export default () => (
   <Card raised>
@@ -37,7 +35,6 @@ export default () => (
         href='https://github.com/RSG-Group/website/tree/master/extras/intersection'
       >Repository
       </Button>
-      <Link href='/intersection' prefetch><Button dense color='primary'>Webpage</Button></Link>
     </CardActions>
   </Card>
 )
