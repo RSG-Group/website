@@ -10,7 +10,7 @@ export default () => (
     <CardMedia style={{textAlign: 'center'}}>
       <img
         src='/static/line-intersection.png'
-        alt='Chess demo.'
+        alt='Rays bro. Rays.'
         height='105pt'
       />
     </CardMedia>
@@ -24,7 +24,7 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/website/tree/master/extras/intersection#line-intersection'
+        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection#line-intersection'
       >Readme
       </Button>
       <Button
@@ -32,7 +32,7 @@ export default () => (
         color='primary'
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/RSG-Group/website/tree/master/extras/intersection'
+        href='https://github.com/RSG-Group/rsg-group.github.io/tree/master/intersection'
       >Repository
       </Button>
     </CardActions>

@@ -14,6 +14,7 @@ export default () => (
       />
     </CardMedia>
     <CardContent>
+      <div style={{height: '15pt'}} />
       <Text type='headline' component='h2'>hyper-background</Text>
       <Text component='p'>Change the background of your Hyper terminal!</Text>
     </CardContent>

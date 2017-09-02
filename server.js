@@ -29,10 +29,12 @@ app.prepare().then(() => {
   const server = express()
 
   // We need a service worker.
-  server.get('/sw.js', (req, res) => {
-    res.set('Content-type', 'text/javascript')
-    res.send(readFileSync(join(__dirname, 'static', 'serviceWorker.js')))
-  })
+  if (!dev) {
+    server.get('/sw.js', (req, res) => {
+      res.set('Content-type', 'text/javascript')
+      res.send(readFileSync(join(__dirname, 'static', 'serviceWorker.js')))
+    })
+  }
 
   // Use Gzip compression in production.
   if (!dev) server.use(compression({ level: 6 }))

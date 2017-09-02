@@ -6,15 +6,15 @@ import { Card, CardContent, CardMedia, Button, CardActions, Typography as Text }
 
 export default () => (
   <Card raised>
-    <br /><br /><br />
+    {/* <br /><br /><br /> */}
     <CardMedia style={{ textAlign: 'center' }}>
-      <img
+      {/* <img
         src='/static/rsg-chess-mobile.png'
-        alt='A button in RSG-Components.'
-      />
+        alt='RSG-Chess-mobile.'
+      /> */}
     </CardMedia>
     <CardContent>
-      <div style={{ height: '11pt' }} />
+      {/* <div style={{ height: '11pt' }} /> */}
       <Text type='headline' component='h2'>RSG-Chess-mobile</Text>
       <Text component='p'>Mobile version of RSG-Chess.</Text>
     </CardContent>

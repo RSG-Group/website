@@ -14,7 +14,7 @@ export default () => (
       />
     </CardMedia>
     <CardContent>
-      <div style={{height: '11pt'}} />
+      <div style={{height: '26pt'}} />
       <Text type='headline' component='h2'>RSG-Components</Text>
       <Text component='p'>Some React components with beautiful styling.</Text>
     </CardContent>
