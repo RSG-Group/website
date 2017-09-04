@@ -24,7 +24,7 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   // Create our server.
   const server = micro(async (req, res) => {
-    // We need a service worker.
+    // We need a service worker in production.
     if (!dev) {
       if (match(req, '/sw.js')) {
         res.setHeader('Content-type', 'text/javascript')
