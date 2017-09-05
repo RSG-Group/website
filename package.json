@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "main": "server/index.js",
+  "main": "microserver.js",
   "version": "2017.9.patch.2",
   "trueVersion": "September 2017 Release (Patch 2)",
   "private": true,
@@ -11,18 +11,25 @@
     "lint": "eslint . && flow check"
   },
   "dependencies": {
-    "express": "^4.15.3",
+    "apollo-server-micro": "^1.1.2",
+    "graphql": "0.10.5",
     "material-ui": "1.0.0-beta.2",
     "material-ui-icons": "^1.0.0-alpha.19",
     "micro": "^8.0.4",
     "micro-route": "^2.4.0",
     "next": "^3.0.3",
     "react": "^15.6.1",
+    "react-apollo": "^1.4.15",
     "react-dom": "^15.6.1"
   },
   "author": "Ibrahim Ansari <ansari.ibrahim1@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/material-ui": "^0.18.0",
+    "@types/micro": "^7.3.1",
+    "@types/next": "^2.4.2",
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",

@@ -1,0 +1,20 @@
+# Type our Card schema.
+type Card {
+  id: Int!
+  title: String!
+  description: String!
+  image: String
+  controls: [Button]!
+}
+
+# A button.
+type Button {
+  id: Int!
+  title: String!
+  link: String!
+}
+
+# Enable query for allCards.
+type Query {
+  allCards: [Card]
+}
