@@ -23,10 +23,6 @@ Start built next.js bundle.
 
 `yarn start` or `npm start`
 
-Create static next.js bundle.
-
-`yarn export` or `npm run export`
-
 ## Credits
 @Radi123 for most of the media and projects in this website.
 

@@ -1,7 +1,7 @@
 {
   "name": "website",
   "main": "server/index.js",
-  "version": "1.0.0",
+  "version": "2017.9.patch.2",
   "trueVersion": "September 2017 Release (Patch 2)",
   "private": true,
   "scripts": {
