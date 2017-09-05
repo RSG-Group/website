@@ -2,7 +2,7 @@
   "name": "website",
   "main": "server/index.js",
   "version": "1.0.0",
-  "trueVersion": "September 2017 Version (Patch 2)",
+  "trueVersion": "September 2017 Release (Patch 2)",
   "private": true,
   "scripts": {
     "dev": "node server.js",
