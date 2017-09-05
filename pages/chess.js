@@ -3,7 +3,7 @@
 import React from 'react'
 
 // Import Header.
-import Header from '../imports/header'
+import Header from '../client/header'
 
 // Beware the ugly and unmaintainable code that the following code shall link to. BEWARE.
 export default () => (

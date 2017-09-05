@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 // Import material-ui and all icons.
 import {AppBar, Toolbar, Typography as Text, IconButton, Button, Drawer, List, ListItem, ListItemText} from 'material-ui'
-import GitHubLogo from '../imports/github-logo'
+import GitHubLogo from './ui/github-logo'
 import MenuIcon from 'material-ui-icons/Menu'
 
 // Import Link from Next.js
