@@ -43,6 +43,10 @@ export default class Header extends React.Component<void, Props, State> {
           <title>{this.props.title}</title>
         </Head>
         <Drawer open={this.state.drawerOpen} onRequestClose={closeOrOpenDrawer}>
+          <div style={{margin: 25}}>
+            <Text type='title' component='h1'>RSG-Group</Text>
+            <Text type='subheading'>September 2017 Version</Text>
+          </div>
           <List style={{
             width: 250,
             flex: 'initial'
