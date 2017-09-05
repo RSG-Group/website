@@ -1713,10 +1713,6 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debounce@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.0.2.tgz#503cc674d8d7f737099664fb75ddbd36b9626dc6"
-
 debug@2.6.8, debug@^2.1.1, debug@^2.2.0, debug@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
@@ -3360,15 +3356,14 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
-micro-dev@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/micro-dev/-/micro-dev-1.2.2.tgz#4107245d2e3512cd13abed7acedc925f0ec1a339"
+micro-dev@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/micro-dev/-/micro-dev-1.2.1.tgz#91c0ca2cffeac0094db811285b91b7a3f7ae75e6"
   dependencies:
     boxen "1.2.1"
     chalk "2.1.0"
     chokidar "1.7.0"
     clipboardy "1.1.4"
-    debounce "1.0.2"
     get-port "3.1.0"
     ip "1.1.5"
     jsome "2.3.26"

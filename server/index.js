@@ -1,5 +1,7 @@
 /* eslint-env node */
-/* Trying to build a non-programmatic version of server.js to leverage micro-dev.
+/* Experiment to build a non-programmatic version of server.js to leverage micro-dev.
+NOTE: This has nothing to do with the actual server code. The actual server is at server.js.
+This also does not export the contents of this folder. It is a version of server.js with micro-dev.
 So, we begin with imports. */
 // Import Micro and micro-route, fs (readFileSync), path (join) and Next.js
 const match = require('micro-route/match')
@@ -15,14 +17,25 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const handle = app.getRequestHandler()
 
+// Track if Next.js has been prepared.
+let prepared
+
 // Once our application is bootstrapped, we need to export our microservice function.
 module.exports = async (req, res) => {
-  // Wait for Next.js to prepare our site.
-  await app.prepare()
+  // If Next.js hasn't been prepared.
+  if (!prepared) {
+    // Wait for Next.js to prepare.
+    await app.prepare()
+    // Tell our external variable that Next.js has been prepared.
+    prepared = true
+  }
   // We need a service worker in a production environment.
   if (!dev) {
+    // If a request for a service worker has been made.
     if (match(req, '/sw.js')) {
+      // Tell the browser we're sending JavaScript.
       res.setHeader('Content-type', 'text/javascript')
+      // Then send our service worker.
       return readFileSync(join(__dirname, 'static', 'serviceWorker.js'))
     }
   }

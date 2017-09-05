@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "main": "microservice.js",
+  "main": "server/index.js",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1",
     "flow-bin": "^0.52.0",
-    "micro-dev": "^1.2.2"
+    "micro-dev": "1.2.1"
   },
   "now": {
     "alias": "rsg-group"

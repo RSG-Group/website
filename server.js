@@ -1,5 +1,7 @@
 /* eslint-env node */
 /* eslint-disable no-console */
+// Looking for the 2nd server implementation in micro-dev? Go to server/index.js
+// NOTE: That file is unmaintained and was an experiment.
 // Import Micro and micro-route, fs (readFileSync), path (join) and Next.js
 const match = require('micro-route/match')
 const micro = require('micro')
@@ -27,7 +29,9 @@ app.prepare().then(() => {
     // We need a service worker in production.
     if (!dev) {
       if (match(req, '/sw.js')) {
+        // Tell the browser it's JavaScript.
         res.setHeader('Content-type', 'text/javascript')
+        // Then resolve and send it.
         return readFileSync(join(__dirname, 'static', 'serviceWorker.js'))
       }
     }
@@ -36,6 +40,7 @@ app.prepare().then(() => {
     return handle(req, res, parse(req.url, true))
   })
 
+  // Start listening on port 3000.
   server.listen(3000, err => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
