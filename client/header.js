@@ -11,6 +11,9 @@ import MenuIcon from 'material-ui-icons/Menu'
 // Import Link from Next.js
 import Link from 'next/link'
 
+// Import package.json for trueVersion.
+import { trueVersion } from '../package.json'
+
 // Type out our props and state.
 type Props = {
   title: string,
@@ -43,6 +46,10 @@ export default class Header extends React.Component<void, Props, State> {
           <title>{this.props.title}</title>
         </Head>
         <Drawer open={this.state.drawerOpen} onRequestClose={closeOrOpenDrawer}>
+          <div style={{margin: 25}}>
+            <Text type='title' component='h1'>RSG-Group</Text>
+            <Text type='subheading'>{trueVersion}</Text>
+          </div>
           <List style={{
             width: 250,
             flex: 'initial'
