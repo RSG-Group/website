@@ -51,7 +51,6 @@ export default class Header extends React.Component<void, Props, State> {
             <Text type='subheading'>{trueVersion}</Text>
           </div>
           <List style={{
-            width: 250,
             flex: 'initial'
           }}>
             <Link prefetch href='/'><ListItem button><ListItemText primary='Home' /></ListItem></Link>
