@@ -44,8 +44,8 @@ app.prepare().then(() => {
     }
 
     // Implement Apollo Server and GraphiQL on Micro.
-    if (match(req, '/graphql')) return graphqlHandler
-    if (match(req, '/graphiql')) return graphiqlHandler
+    if (match(req, '/graphql')) return graphqlHandler(req, res)
+    if (match(req, '/graphiql')) return graphiqlHandler(req, res)
 
     // Our server will respond with the generated webpage.
     return handle(req, res, parse(req.url, true))
