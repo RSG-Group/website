@@ -9,6 +9,13 @@ const next = require('next')
 const { readFileSync } = require('fs')
 const { join } = require('path')
 const { parse } = require('url')
+// Get Apollo Server and GraphQL schema.
+const { microGraphiql, microGraphql } = require('apollo-server-micro')
+const schema = require('./server')
+
+// Setup event handlers for Apollo Server.
+const graphqlHandler = microGraphql({ schema })
+const graphiqlHandler = microGraphiql({ endpointURL: '/graphql' })
 
 // We can't check for production with a flag, so we will depend on the environment variable.
 const dev = process.env.NODE_ENV !== 'production'
@@ -39,6 +46,10 @@ module.exports = async (req, res) => {
       return readFileSync(join(__dirname, 'static', 'serviceWorker.js'))
     }
   }
+
+  // Implement Apollo Server and GraphiQL on Micro.
+  if (match(req, '/graphql')) return graphqlHandler(req, res)
+  if (match(req, '/graphiql')) return graphiqlHandler(req, res)
 
   // Else, if the client is requesting something else, ask Next.js to handle the request.
   return handle(req, res, parse(req.url, true))

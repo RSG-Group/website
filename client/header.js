@@ -22,6 +22,9 @@ type State = {
   drawerOpen: boolean
 }
 
+// Declare navigator!
+declare var navigator: any
+
 // Write our page header.
 export default class Header extends React.Component<void, Props, State> {
   constructor (props: Props) {

@@ -13,7 +13,7 @@ const { parse } = require('url')
 const { microGraphiql, microGraphql } = require('apollo-server-micro')
 const schema = require('./server')
 
-// Setup event handlers.
+// Setup event handlers for Apollo Server.
 const graphqlHandler = microGraphql({ schema })
 const graphiqlHandler = microGraphiql({ endpointURL: '/graphql' })
 
