@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
           {this.props.customValue}
           <Main />
           <NextScript />
+          <noscript>Your browser does not support JavaScript or it is disabled!</noscript>
         </body>
       </html>
     )
