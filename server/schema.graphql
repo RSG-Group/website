@@ -7,7 +7,7 @@ type Card {
   # description describes the project.
   description: String!
   # image links to the image associated with the card.
-  image: String
+  image: [String]
   # controls are a list of buttons which can be added to a Card UI.
   controls: [Button]!
 }
