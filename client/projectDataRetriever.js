@@ -8,17 +8,12 @@ import { graphql, gql } from 'react-apollo'
 // Get Material-UI.
 import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions } from 'material-ui'
 
-// Types.
+// Import our types.
+import type { allCardsQuery } from './projectDataRetriever.types'
+
+// Define prop types.
 type Props = {
-  allCardsQuery: {
-    loading?: boolean,
-    error?: string,
-    allCards: Array<{
-      image: Array<string>,
-      title: string,
-      description: string
-    }>
-  }
+  allCardsQuery: allCardsQuery
 }
 
 // Create a React Component.
