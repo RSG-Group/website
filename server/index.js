@@ -9,7 +9,7 @@ const { join } = require('path')
 const CardsDB = require('./database')
 
 // Get our schema.
-const typeDefs = readFileSync(join(__dirname, 'schema', 'schema.graphql'))
+const typeDefs = readFileSync(join(process.cwd(), 'server', 'schema.graphql'), { encoding: 'utf8' })
 
 // Set up resolvers.
 const resolvers = {
@@ -20,6 +20,6 @@ const resolvers = {
 
 // Create and export a schema.
 module.exports = makeExecutableSchema({
-  typeDefs,
-  resolvers
+  typeDefs: typeDefs,
+  resolvers: resolvers
 })

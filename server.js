@@ -11,7 +11,7 @@ const { join } = require('path')
 const { parse } = require('url')
 // Get Apollo Server and GraphQL schema.
 const { microGraphiql, microGraphql } = require('apollo-server-micro')
-const schema = require('./server')
+const schema = require('./server/index')
 
 // Setup event handlers for Apollo Server.
 const graphqlHandler = microGraphql({ schema })
