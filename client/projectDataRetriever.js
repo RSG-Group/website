@@ -44,6 +44,7 @@ class Projects extends React.Component<void, Props, void> {
         <img
           src={card.image[0]}
           alt={card.image[1]}
+          style={{ height: card.image[2] ? card.image[2] : undefined }}
         />
       </CardMedia>
     ) : ''
@@ -53,6 +54,7 @@ class Projects extends React.Component<void, Props, void> {
         {card.image ? [<br />, <br />, <br />] : ''}
         {card.image ? <Image /> : ''}
         <CardContent>
+          {card.divSpacing ? <div style={{ height: card.divSpacing }} /> : ''}
           <Text type='headline' component='h2'>{card.title}</Text>
           <Text component='p'>{card.description}</Text>
         </CardContent>

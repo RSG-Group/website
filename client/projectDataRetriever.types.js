@@ -8,7 +8,7 @@ export type Card = {
   id: number,
   title: string,
   description: string,
-  image: [string, string],
+  image: [string, string, string],
   controls: Array<Button>
 }
 export type allCards = Array<Card>

@@ -6,10 +6,12 @@ type Card {
   title: String!
   # description describes the project.
   description: String!
-  # image links to the image associated with the card.
+  # image is an array of the image link, its alt and in some cases, height.
   image: [String]
   # controls are a list of buttons which can be added to a Card UI.
   controls: [Button]!
+  # any custom div spacing needed?
+  divSpacing: Int
 }
 
 # A button.
@@ -20,6 +22,8 @@ type Button {
   title: String!
   # link is where the button will redirect you.
   link: String!
+  # is it an internal link?
+  internalLink: Boolean
 }
 
 # Enable queries.
