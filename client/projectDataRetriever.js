@@ -6,7 +6,10 @@ import React from 'react'
 import { graphql, gql } from 'react-apollo'
 
 // Get Material-UI.
-import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions } from 'material-ui'
+import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Button } from 'material-ui'
+
+// Import Link from Next.js.
+import Link from 'next/link'
 
 // Import our types.
 import type { allCardsQuery } from './projectDataRetriever.types'
@@ -48,18 +51,37 @@ class Projects extends React.Component<void, Props, void> {
         />
       </CardMedia>
     ) : ''
+    // Setup CreateButton to create buttons.
+    const CreateButton = button => (
+      button.internalLink
+        ? <Link href={button.link} prefetch><Button dense color='primary'>{button.title}</Button></Link>
+        : (
+          <Button
+            dense
+            color='primary'
+            target='_blank'
+            rel='noopener noreferrer'
+            href={button.link}
+          >{button.title}
+          </Button>
+        )
+    )
     // Return a card.
     return (
-      <Card raised>
-        {card.image ? <br /> : ''}
-        {card.image ? <Image /> : ''}
-        <CardContent>
-          {card.divSpacing ? <div style={{ height: card.divSpacing }} /> : ''}
-          <Text type='headline' component='h2'>{card.title}</Text>
-          <Text component='p'>{card.description}</Text>
-        </CardContent>
-        <CardActions />
-      </Card>
+      <Grid item xs>
+        <Card raised>
+          {card.image ? <br /> : ''}
+          {card.image ? <Image /> : ''}
+          <CardContent>
+            {card.divSpacing ? <div style={{ height: card.divSpacing }} /> : ''}
+            <Text type='headline' component='h2'>{card.title}</Text>
+            <Text component='p'>{card.description}</Text>
+          </CardContent>
+          <CardActions>
+            {card.controls.map(button => CreateButton(button))}
+          </CardActions>
+        </Card>
+      </Grid>
     )
   }
 }
@@ -71,9 +93,11 @@ const CARDS_QUERY = gql`
       title
       description
       image
+      divSpacing
       controls {
         title
         link
+        internalLink
       }
     }
   }

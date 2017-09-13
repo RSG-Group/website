@@ -36,7 +36,7 @@ app.prepare().then(() => {
     // We need a service worker in production.
     if (!dev) {
       if (match(req, '/sw.js')) {
-        // Tell the browser it's JavaScript.
+      // Tell the browser it's JavaScript.
         res.setHeader('Content-type', 'text/javascript')
         // Then resolve and send it.
         return readFileSync(join(__dirname, 'static', 'serviceWorker.js'))
@@ -45,7 +45,7 @@ app.prepare().then(() => {
 
     // Implement Apollo Server and GraphiQL on Micro.
     if (match(req, '/graphql')) return graphqlHandler(req, res)
-    if (match(req, '/graphiql')) return graphiqlHandler(req, res)
+    if (dev) if (match(req, '/graphiql')) return graphiqlHandler(req, res)
 
     // Our server will respond with the generated webpage.
     return handle(req, res, parse(req.url, true))

@@ -27,7 +27,7 @@ module.exports = [
       link: 'https://github.com/RSG-Group/rsg-components/wiki',
       internalLink: false
     }],
-    divSpacing: 26
+    divSpacing: 15
   }, {
     id: 2,
     title: 'hyper-background',

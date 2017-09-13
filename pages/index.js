@@ -5,8 +5,8 @@ import React from 'react'
 // Import our header.
 import Header from '../client/header'
 
-// Import our JSX object of projects.
-import Projects from '../client/ui/cards'
+// Import the Apollo container which retrieves our data.
+import Projects from '../client/projectDataRetriever'
 
 // Import Apollo.
 import { ApolloClient, ApolloProvider } from 'react-apollo'
