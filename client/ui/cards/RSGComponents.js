@@ -6,7 +6,7 @@ import {Card, CardContent, CardMedia, Button, CardActions, Typography as Text} f
 
 export default () => (
   <Card raised>
-    <br /><br /><br />
+    <br />
     <CardMedia style={{textAlign: 'center'}}>
       <img
         src='/static/rsg-components.png'

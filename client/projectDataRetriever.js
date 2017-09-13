@@ -51,7 +51,7 @@ class Projects extends React.Component<void, Props, void> {
     // Return a card.
     return (
       <Card raised>
-        {card.image ? [<br />, <br />, <br />] : ''}
+        {card.image ? <br /> : ''}
         {card.image ? <Image /> : ''}
         <CardContent>
           {card.divSpacing ? <div style={{ height: card.divSpacing }} /> : ''}
