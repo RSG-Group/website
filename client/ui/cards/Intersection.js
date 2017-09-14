@@ -11,7 +11,7 @@ export default () => (
       <img
         src='/static/line-intersection.png'
         alt='Rays bro. Rays.'
-        height='105pt'
+        height='80pt'
       />
     </CardMedia>
     <CardContent>

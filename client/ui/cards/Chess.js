@@ -13,7 +13,7 @@ export default () => (
       <img
         src='/static/chess.png'
         alt='Chess demo.'
-        height='105pt'
+        height='95pt'
       />
     </CardMedia>
     <CardContent>

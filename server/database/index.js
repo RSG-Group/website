@@ -55,7 +55,7 @@ module.exports = [
     image: [
       '/static/chess.png',
       'Chess demo.',
-      '105pt'
+      '95pt'
     ],
     controls: [{
       id: 1,
@@ -80,7 +80,7 @@ module.exports = [
     image: [
       '/static/line-intersection.png',
       'Rays bro. Rays.',
-      '105pt'
+      '80pt'
     ],
     controls: [{
       id: 1,
