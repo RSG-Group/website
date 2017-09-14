@@ -10,8 +10,8 @@ type Card {
   image: [String]
   # controls are a list of buttons which can be added to a Card UI.
   controls: [Button]!
-  # any custom div spacing needed?
-  divSpacing: Int
+  # buttonSpacing specifies the spacing between card and button.
+  buttonSpacing: Int
 }
 
 # A button.

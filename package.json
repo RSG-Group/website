@@ -13,7 +13,7 @@
   "dependencies": {
     "apollo-server-micro": "^1.1.2",
     "graphql": "0.10.5",
-    "material-ui": "1.0.0-beta.2",
+    "material-ui": "1.0.0-beta.10",
     "material-ui-icons": "^1.0.0-alpha.19",
     "micro": "^8.0.4",
     "micro-route": "^2.4.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1",
-    "flow-bin": "^0.52.0",
+    "flow-bin": "0.54.1",
     "graphql-schema-linter": "0.0.9",
     "micro-dev": "1.2.1"
   },

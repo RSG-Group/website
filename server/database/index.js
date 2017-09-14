@@ -27,7 +27,7 @@ module.exports = [
       link: 'https://github.com/RSG-Group/rsg-components/wiki',
       internalLink: false
     }],
-    divSpacing: 15
+    buttonSpacing: 700
   }, {
     id: 2,
     title: 'hyper-background',
@@ -47,7 +47,7 @@ module.exports = [
       link: 'https://github.com/RSG-Group/hyper-background',
       internalLink: false
     }],
-    divSpacing: 15
+    buttonSpacing: 15
   }, {
     id: 3,
     title: 'Chess',
@@ -117,6 +117,6 @@ module.exports = [
       link: 'https://build.phonegap.com/apps/2773889/builds',
       internalLink: false
     }],
-    divSpacing: 11
+    buttonSpacing: 11
   }
 ]

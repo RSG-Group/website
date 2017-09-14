@@ -12,15 +12,10 @@ import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Bu
 import Link from 'next/link'
 
 // Import our types.
-import type { allCardsQuery } from './projectDataRetriever.types'
-
-// Define prop types.
-type Props = {
-  allCardsQuery: allCardsQuery
-}
+import type { Props } from './types/projectDataRetriever.types'
 
 // Create a React Component.
-class Projects extends React.Component<void, Props, void> {
+class Projects extends React.Component<Props, void> {
   render () {
     // If we are loading data or experienced an error.
     if (this.props.allCardsQuery && this.props.allCardsQuery.loading) {
@@ -47,7 +42,7 @@ class Projects extends React.Component<void, Props, void> {
         <img
           src={card.image[0]}
           alt={card.image[1]}
-          style={{ height: card.image[2] ? card.image[2] : undefined }}
+          style={{ height: 137 }}
         />
       </CardMedia>
     ) : ''
@@ -62,6 +57,7 @@ class Projects extends React.Component<void, Props, void> {
             target='_blank'
             rel='noopener noreferrer'
             href={button.link}
+            key={button.title}
           >{button.title}
           </Button>
         )
@@ -69,15 +65,15 @@ class Projects extends React.Component<void, Props, void> {
     // Return a card.
     return (
       <Grid item xs>
-        <Card raised>
+        <Card raised style={{ height: 360 }}>
           {card.image ? <br /> : ''}
           {card.image ? <Image /> : ''}
           <CardContent>
-            {card.divSpacing ? <div style={{ height: card.divSpacing }} /> : ''}
+            <br />
             <Text type='headline' component='h2'>{card.title}</Text>
             <Text component='p'>{card.description}</Text>
           </CardContent>
-          <CardActions>
+          <CardActions style={{ paddingTop: card.buttonSpacing }}>
             {card.controls.map(button => CreateButton(button))}
           </CardActions>
         </Card>
@@ -93,7 +89,7 @@ const CARDS_QUERY = gql`
       title
       description
       image
-      divSpacing
+      buttonSpacing
       controls {
         title
         link

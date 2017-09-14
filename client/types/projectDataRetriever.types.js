@@ -9,11 +9,16 @@ export type Card = {
   title: string,
   description: string,
   image: [string, string, string],
-  controls: Array<Button>
+  controls: Array<Button>,
+  buttonSpacing: string
 }
 export type allCards = Array<Card>
 export type allCardsQuery = {
   loading?: boolean,
   error?: string,
   allCards: allCards
+}
+// Define prop types.
+export type Props = {
+  allCardsQuery: allCardsQuery
 }

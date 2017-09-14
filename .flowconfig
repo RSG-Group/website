@@ -1,16 +1,21 @@
 [ignore]
-# Following packages ignored due to type errors.
-.*/node_modules/eslint-plugin-jsx-a11y/.*
+# material-ui's tests ignored.
 .*/node_modules/material-ui/test-utils/.*
-.*/node_modules/material-ui/styles/createGenerateClassName.js.flow.*
-.*/node_modules/mitt/src/.*
+# Flow errors here.
 .*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js.*
-.*/node_modules/jss/lib/plugins/RegularRule.js.flow.*
+.*/node_modules/jss/lib/renderers/DomRenderer.js.flow.*
+# Certain things I ignore for now.
+.*/node_modules/graphql/.*.flow
+.*/node_modules/react-apollo/.*.flow
+# No hoisting? Shove off.
+.*/node_modules/react-scrollbar-size/node_modules/.*
+.*/node_modules/graphql-config/node_modules/.*
 
 [include]
 
 [libs]
 node_modules/jss/flow-typed
+
 [options]
 emoji=true
 suppress_comment= \\(.\\|\n\\)*\\(flow-disable-next-line\\|\\$FlowFixMe\\)

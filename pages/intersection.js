@@ -3,7 +3,7 @@
 import React from 'react'
 
 // Import our header.
-import Header from '../client/header'
+import Header from '../client/ui/header'
 
 // Export our final page.
 export default () => (

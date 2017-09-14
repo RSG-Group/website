@@ -3,7 +3,7 @@
 import React from 'react'
 
 // Import our header.
-import Header from '../client/header'
+import Header from '../client/ui/header'
 
 // Import the Apollo container which retrieves our data.
 import Projects from '../client/projectDataRetriever'
