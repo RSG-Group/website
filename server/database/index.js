@@ -1,3 +1,4 @@
+// @flow
 // A primitive JavaScript database because we can.
 // All objects in this database must conform to ../schema.graphql
 // Currently nothing more than a test database. Will be expanded soon.
@@ -27,7 +28,7 @@ module.exports = [
       link: 'https://github.com/RSG-Group/rsg-components/wiki',
       internalLink: false
     }],
-    buttonSpacing: 700
+    buttonSpacing: 20
   }, {
     id: 2,
     title: 'hyper-background',
@@ -47,10 +48,11 @@ module.exports = [
       link: 'https://github.com/RSG-Group/hyper-background',
       internalLink: false
     }],
-    buttonSpacing: 15
+    buttonSpacing: 20
   }, {
     id: 3,
     title: 'Chess',
+    buttonSpacing: 20,
     description: 'Cool chess game to play with your friends. (Single player mode WIP)',
     image: [
       '/static/chess.png',
@@ -76,6 +78,7 @@ module.exports = [
   }, {
     id: 4,
     title: 'line-intersection',
+    buttonSpacing: 15,
     description: 'Simple mini library for finding the intersection of a line or line segment.',
     image: [
       '/static/line-intersection.png',
@@ -117,6 +120,6 @@ module.exports = [
       link: 'https://build.phonegap.com/apps/2773889/builds',
       internalLink: false
     }],
-    buttonSpacing: 11
+    buttonSpacing: 40
   }
 ]

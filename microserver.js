@@ -31,10 +31,10 @@ let prepared
 module.exports = async (req, res) => {
   // If Next.js hasn't been prepared.
   if (!prepared) {
-    // Wait for Next.js to prepare.
-    await app.prepare()
     // Tell our external variable that Next.js has been prepared.
     prepared = true
+    // Wait for Next.js to prepare.
+    await app.prepare()
   }
   // We need a service worker in a production environment.
   if (!dev) {
