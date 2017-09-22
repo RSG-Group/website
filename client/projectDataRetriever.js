@@ -89,7 +89,6 @@ const CARDS_QUERY = gql`
       title
       description
       image
-      buttonSpacing
       controls {
         title
         link
