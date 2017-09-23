@@ -42,7 +42,7 @@ class Projects extends React.Component<Props, void> {
         <img
           src={card.image[0]}
           alt={card.image[1]}
-          style={{ height: 137 }}
+          style={{ height: card.image[2] }}
         />
       </CardMedia>
     ) : ''
@@ -65,7 +65,7 @@ class Projects extends React.Component<Props, void> {
     // Return a card.
     return (
       <Grid item xs>
-        <Card raised style={{ height: 360 }}>
+        <Card raised style={{ height: 320, display: 'table', minWidth: '250px' }}>
           {card.image ? <br /> : ''}
           {card.image ? <Image /> : ''}
           <CardContent>
@@ -73,7 +73,7 @@ class Projects extends React.Component<Props, void> {
             <Text type='headline' component='h2'>{card.title}</Text>
             <Text component='p'>{card.description}</Text>
           </CardContent>
-          <CardActions style={{ position: 'relative', top: card.buttonSpacing }}>
+          <CardActions style={{ display: 'table-row', verticalAlign: 'bottom', textAlign: 'center' }}>
             {card.controls.map(button => CreateButton(button))}
           </CardActions>
         </Card>
@@ -89,7 +89,6 @@ const CARDS_QUERY = gql`
       title
       description
       image
-      buttonSpacing
       controls {
         title
         link
