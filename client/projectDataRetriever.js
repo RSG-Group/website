@@ -73,7 +73,7 @@ class Projects extends React.Component<Props, void> {
             <Text type='headline' component='h2'>{card.title}</Text>
             <Text component='p'>{card.description}</Text>
           </CardContent>
-          <CardActions style={{ position: 'relative', top: card.buttonSpacing }}>
+          <CardActions>
             {card.controls.map(button => CreateButton(button))}
           </CardActions>
         </Card>
@@ -89,7 +89,6 @@ const CARDS_QUERY = gql`
       title
       description
       image
-      buttonSpacing
       controls {
         title
         link

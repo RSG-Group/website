@@ -62,7 +62,7 @@ export default class Header extends React.Component<Props, State> {
           <Toolbar>
             <IconButton color='contrast' onClick={closeOrOpenDrawer} aria-label='Navigation Menu'><MenuIcon /></IconButton>
             <Link href='/' prefetch>
-              <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40 }} alt='' />
+              <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40, cursor: 'pointer' }} alt='' />
             </Link>
             <Text type='title' color='inherit'>RSG-Group</Text>
             <div style={{flex: 1}} />
