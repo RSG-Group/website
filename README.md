@@ -24,6 +24,6 @@ Start built next.js bundle.
 `yarn start` or `npm start`
 
 ## Credits
-@Radi123 for most of the media and projects in this website.
+@radi-cho for most of the media and projects in this website.
 
 While not necessary, credits to Chase-san from Wikipedia for an [apt picture](https://commons.wikimedia.org/wiki/File:Line-Line_Intersection.png) for line-intersection.
