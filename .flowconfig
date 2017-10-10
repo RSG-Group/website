@@ -3,13 +3,19 @@
 .*/node_modules/material-ui/test-utils/.*
 # Flow errors here.
 .*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js.*
+.*/node_modules/jss/lib/renderers/*.js.flow.*
 .*/node_modules/jss/lib/renderers/DomRenderer.js.flow.*
+.*/node_modules/jss/lib/utils/*.js.flow.*
+.*/node_modules/jss/lib/types.js.flow.*
 # Certain things I ignore for now.
 .*/node_modules/graphql/.*.flow
 .*/node_modules/react-apollo/.*.flow
 # No hoisting? Shove off.
 .*/node_modules/react-scrollbar-size/node_modules/.*
 .*/node_modules/graphql-config/node_modules/.*
+# Erroring JSON.
+.*/node_modules/config-chain/test/broken.json.*
+.*/node_modules/npmconf/test/fixtures/package.json.*
 
 [include]
 
