@@ -5,11 +5,14 @@
   "trueVersion": "October 2017 Release",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node --experimental-modules server.js",
     "build": "next build",
-    "start": "node server.js --production",
+    "start": "node --experimental-modules server.js --production",
     "hcr-dev": "micro-dev --ignore .next",
     "lint": "eslint . && flow check && graphql-schema-linter server/schema.graphql"
+  },
+  "engines": {
+    "node": ">=8.5.0"
   },
   "dependencies": {
     "apollo-server-micro": "^1.1.2",

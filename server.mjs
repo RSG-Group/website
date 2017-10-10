@@ -3,15 +3,15 @@
 /* Looking for the 2nd server implementation in micro-dev? Go to microserver.js
 NOTE: That file is unmaintained and was an experiment. */
 // Import Micro and micro-route, fs (readFileSync), path (join) and Next.js
-const match = require('micro-route/match')
-const micro = require('micro')
-const next = require('next')
-const { readFileSync } = require('fs')
-const { join } = require('path')
-const { parse } = require('url')
+import match from 'micro-route/match'
+import micro from 'micro'
+import next from 'next'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import { parse } from 'url'
 // Get Apollo Server and GraphQL schema.
-const { microGraphiql, microGraphql } = require('apollo-server-micro')
-const schema = require('./server/index')
+import { microGraphiql, microGraphql } from 'apollo-server-micro'
+import schema from './server/index.mjs'
 
 // Setup event handlers for Apollo Server.
 const graphqlHandler = microGraphql({ schema })
