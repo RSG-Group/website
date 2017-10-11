@@ -6,16 +6,16 @@ NOTE: That file is unmaintained and was an experiment. */
 import match from 'micro-route/match'
 import micro from 'micro'
 import next from 'next'
-import { readFileSync } from 'fs'
-import { join } from 'path'
-import { parse } from 'url'
+import fs from 'fs'
+import path from 'path'
+import url from 'url'
 // Get Apollo Server and GraphQL schema.
-import { microGraphiql, microGraphql } from 'apollo-server-micro'
-import schema from './server/index.mjs'
+import apolloServer from 'apollo-server-micro'
+import schema from './server/index.js'
 
 // Setup event handlers for Apollo Server.
-const graphqlHandler = microGraphql({ schema })
-const graphiqlHandler = microGraphiql({ endpointURL: '/graphql' })
+const graphqlHandler = apolloServer.microGraphql({ schema })
+const graphiqlHandler = apolloServer.microGraphiql({ endpointURL: '/graphql' })
 
 // If production is explicitly specified via flag..
 if (process.argv[2] === '--production') {
@@ -39,7 +39,7 @@ app.prepare().then(() => {
       // Tell the browser it's JavaScript.
         res.setHeader('Content-type', 'text/javascript')
         // Then resolve and send it.
-        return readFileSync(join(__dirname, 'static', 'serviceWorker.js'))
+        return fs.readFileSync(path.join(__dirname, 'static', 'serviceWorker.js'))
       }
     }
 
@@ -48,7 +48,7 @@ app.prepare().then(() => {
     if (dev) if (match(req, '/graphiql')) return graphiqlHandler(req, res)
 
     // Our server will respond with the generated webpage.
-    return handle(req, res, parse(req.url, true))
+    return handle(req, res, url.parse(req.url, true))
   })
 
   // Start listening on port 3000.

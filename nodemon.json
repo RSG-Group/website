@@ -1,0 +1,8 @@
+{
+  "ignore": [
+    "client",
+    "pages",
+    ".git",
+    "node_modules"
+  ]
+}

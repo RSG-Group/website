@@ -5,10 +5,10 @@
   "trueVersion": "October 2017 Release",
   "private": true,
   "scripts": {
-    "dev": "node --experimental-modules server.js",
+    "dev": "nodemon --experimental-modules server.mjs",
     "build": "next build",
-    "start": "node --experimental-modules server.js --production",
-    "hcr-dev": "micro-dev --ignore .next",
+    "start": "node --experimental-modules server.mjs --production",
+    "hcr-dev": "micro-dev --ignore .next,client,pages --experimental-modules",
     "lint": "eslint . && flow check && graphql-schema-linter server/schema.graphql"
   },
   "engines": {
@@ -51,7 +51,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "flow-bin": "0.56.0",
     "graphql-schema-linter": "0.0.9",
-    "micro-dev": "1.2.1"
+    "micro-dev": "1.2.1",
+    "nodemon": "^1.12.1"
   },
   "now": {
     "alias": "rsg-group"
