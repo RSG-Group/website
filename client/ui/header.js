@@ -45,7 +45,7 @@ export default class Header extends React.Component<Props, State> {
         </Head>
         <Drawer open={this.state.drawerOpen} onRequestClose={closeOrOpenDrawer}>
           <div style={{margin: 25}}>
-            <Text type='title' component='h1'>RSG-Group</Text>
+            <Text type='title' component='h1'>RSG</Text>
             <Text type='subheading'>{trueVersion}</Text>
           </div>
           <List style={{
@@ -64,7 +64,7 @@ export default class Header extends React.Component<Props, State> {
             <Link href='/' prefetch>
               <img src='/static/favicon.ico' style={{ marginRight: 10, marginLeft: 10, height: 40, cursor: 'pointer' }} alt='' />
             </Link>
-            <Text type='title' color='inherit'>RSG-Group</Text>
+            <Text type='title' color='inherit'>RSG</Text>
             <div style={{flex: 1}} />
             <Button
               title='Fork me on GitHub'

@@ -8,7 +8,7 @@ import Header from '../client/ui/header'
 // Export our final page.
 export default () => (
   <div>
-    <Header title='RSG-Group' />
+    <Header title='RSG' />
     <h1>Extras - line-intersection</h1>
     <p>A simple library which finds the intersection of two lines or line segments!</p>
     <p><a target='_blank' rel='noopener noreferrer'

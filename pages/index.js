@@ -18,7 +18,7 @@ const client = new ApolloClient()
 export default () => (
   <ApolloProvider client={client}>
     <div>
-      <Header title='RSG-Group' />
+      <Header title='RSG' />
       <Projects />
     </div>
   </ApolloProvider>

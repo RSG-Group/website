@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-(Un)official RSG-Group website built in Material Design w/ Next.js w/ Express w/ Apollo (WIP) w/ SSR w/ Babel w/ Redux (MobX under consideration) w/ Flow (whew.)
+(Un)official RSG website built in Material Design w/ Next.js w/ Express w/ Apollo (WIP) w/ SSR w/ Babel w/ Redux (MobX under consideration) w/ Flow (whew.)
 
 Babel, Flow, Next.js and SSR part built :P
 Work on Redux going on.
