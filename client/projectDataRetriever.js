@@ -65,7 +65,7 @@ class Projects extends React.Component<Props, void> {
     // Return a card.
     return (
       <Grid item xs>
-        <Card raised style={{ height: 360 }}>
+        <Card raised style={{ height: 360, position: 'relative' }}>
           {card.image ? <br /> : ''}
           {card.image ? <Image /> : ''}
           <CardContent>
@@ -73,7 +73,7 @@ class Projects extends React.Component<Props, void> {
             <Text type='headline' component='h2'>{card.title}</Text>
             <Text component='p'>{card.description}</Text>
           </CardContent>
-          <CardActions>
+          <CardActions style={{ position: 'absolute', left: 0, bottom: 0 }}>
             {card.controls.map(button => CreateButton(button))}
           </CardActions>
         </Card>
