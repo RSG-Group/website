@@ -1,5 +1,5 @@
 #table{
-  background: rgba(247, 203, 76, 0.5);
+  background: rgb(209, 139, 71);
   border: 1px solid black;
   width: 500px;
   height: 500px;
@@ -8,13 +8,27 @@
 }
 
 div#app{
- perspective: 1555px;
+  perspective: 1555px;
+}
+
+.rotated {
+  transform: rotateX(180deg);
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  margin: 3px;
+  font-size: 21px;
+  cursor: pointer;
 }
 
 div#app > div {
- transition: transform 1s;
+ /* transition: transform 1s;
  transform: rotateX(15deg) rotateY(-15deg) rotateX(3deg);
- transform-origin: 15px 525px 15px;
+ transform-origin: 15px 525px 15px; */
  display: inline-block;
 }
 
@@ -43,7 +57,7 @@ div#app > div:hover{
   border: 1px solid gray;
   width: 12.5%;
   height: 12.5%;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
 }
 
