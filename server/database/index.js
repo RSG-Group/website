@@ -112,8 +112,8 @@ module.exports = [
       internalLink: false
     }, {
       id: 3,
-      title: 'Installers',
-      link: 'https://build.phonegap.com/apps/2773889/builds',
+      title: 'Play Store',
+      link: 'https://play.google.com/store/apps/details?id=com.rsg.chess',
       internalLink: false
     }]
   }
