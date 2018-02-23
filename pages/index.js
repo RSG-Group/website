@@ -9,10 +9,16 @@ import Header from '../client/ui/header'
 import Projects from '../client/projectDataRetriever'
 
 // Import Apollo.
-import { ApolloClient, ApolloProvider } from 'react-apollo'
+import { ApolloClient } from 'apollo-client'
+import { HttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import { ApolloProvider } from 'react-apollo'
 
 // Create an Apollo client.
-const client = new ApolloClient()
+const client = new ApolloClient({
+  link: new HttpLink(),
+  cache: new InMemoryCache()
+})
 
 // Export our final page.
 export default () => (

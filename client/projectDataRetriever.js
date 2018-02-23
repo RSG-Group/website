@@ -3,7 +3,8 @@
 import React from 'react'
 
 // Query our Apollo Server w/ React Apollo.
-import { graphql, gql } from 'react-apollo'
+import gql from 'graphql-tag'
+import { graphql } from 'react-apollo'
 
 // Get Material-UI.
 import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Button } from 'material-ui'
