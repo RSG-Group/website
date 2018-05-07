@@ -1,5 +1,5 @@
 {
-  "presets": ["react", ["env", {
+  "presets": ["@babel/preset-react", ["@babel/preset-env", {
     "targets": {
       "node": "current",
       "browsers": [
@@ -10,6 +10,6 @@
     },
     "useBuiltIns": true,
     "modules": false
-  }], "stage-0"],
-  "plugins": ["transform-runtime"]
+  }], "@babel/preset-stage-0"],
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
