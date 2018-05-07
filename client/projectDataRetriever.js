@@ -3,8 +3,8 @@
 import React from 'react'
 
 // Query our Apollo Server w/ React Apollo.
-import gql from 'graphql-tag'
-import { graphql } from 'react-apollo'
+import { gql } from 'apollo-boost'
+import { Query } from 'react-apollo'
 
 // Get Material-UI.
 import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Button } from 'material-ui'
@@ -12,31 +12,47 @@ import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Bu
 // Import Link from Next.js.
 import Link from 'next/link'
 
-// Import our types.
-import type { Props } from './types/projectDataRetriever.types'
+// Query for allCards without their IDs as they are unnecessary.
+const CARDS_QUERY = gql`
+  query AllCardsQuery {
+    allCards {
+      title
+      description
+      image
+      controls {
+        title
+        link
+        internalLink
+      }
+    }
+  }
+`
 
 // Create a React Component.
-class Projects extends React.Component<Props, void> {
+export default class Projects extends React.Component<{}> {
   render () {
-    // If we are loading data or experienced an error.
-    if (this.props.allCardsQuery && this.props.allCardsQuery.loading) {
-      return <Text type='title'>Loading.</Text>
-    } else if (this.props.allCardsQuery && this.props.allCardsQuery.error) {
-      const error = this.props.allCardsQuery.error
-      return <Text type='title'>Error while loading data ({error}). Try reloading the page.</Text>
-    }
-    // If we've finished loading without errors, here we go.
-    const allCards = this.props.allCardsQuery.allCards
+    // The error.
+    const Error = (props) =>
+      <Text type='title'>Error while loading data ({props.error}). Try reloading the page.</Text>
     return (
       <Grid container>
-        {allCards.map(card => (
-          this.processCard(card)
-        ))}
+        <Query query={CARDS_QUERY}>
+          {({ loading, error, data }) => {
+            // If the data is loading or there is an error.
+            if (error) return <Error error={error} />
+            if (loading || !data) return <Text type='title'>Loading.</Text>
+            return data.allCards.map(card => (this.processCard(card)))
+          }}
+        </Query>
       </Grid>
     )
   }
 
-  processCard (card) {
+  processCard (card: {
+    image: Array<string>, title: string, description: string, controls: Array<{
+      title: string, link: string
+    }>
+  }) {
     // If Image is there..
     const Image = () => card.image ? (
       <CardMedia style={{ textAlign: 'center' }}>
@@ -82,22 +98,3 @@ class Projects extends React.Component<Props, void> {
     )
   }
 }
-
-// Query for allCards without their IDs as they are unnecessary.
-const CARDS_QUERY = gql`
-  query AllCardsQuery {
-    allCards {
-      title
-      description
-      image
-      controls {
-        title
-        link
-        internalLink
-      }
-    }
-  }
-`
-
-// Make the query and tranform our component into a container.
-export default graphql(CARDS_QUERY, { name: 'allCardsQuery' })(Projects)

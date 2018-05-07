@@ -9,16 +9,11 @@ import Header from '../client/ui/header'
 import Projects from '../client/projectDataRetriever'
 
 // Import Apollo.
-import { ApolloClient } from 'apollo-client'
-import { HttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
+import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
 // Create an Apollo client.
-const client = new ApolloClient({
-  link: new HttpLink(),
-  cache: new InMemoryCache()
-})
+const client = new ApolloClient({ uri: '/graphql' })
 
 // Export our final page.
 export default () => (

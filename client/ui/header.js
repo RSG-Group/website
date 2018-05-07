@@ -6,7 +6,7 @@ import Head from 'next/head'
 // Import material-ui and all icons.
 import {AppBar, Toolbar, Typography as Text, IconButton, Button, Drawer, List, ListItem, ListItemText} from 'material-ui'
 import GitHubLogo from './github-logo'
-import MenuIcon from 'material-ui-icons/Menu'
+import MenuIcon from '@material-ui/icons/Menu'
 
 // Import Link from Next.js
 import Link from 'next/link'
@@ -14,21 +14,17 @@ import Link from 'next/link'
 // Import package.json for trueVersion.
 import { trueVersion } from '../../package.json'
 
-// Import types.
-import type { Props, State } from '../types/header.types'
-
 // Declare navigator!
 declare var navigator: Object
 
 // Write our page header.
-export default class Header extends React.Component<Props, State> {
-  constructor (props: Props) {
+export default class Header extends React.Component<{ title: string }, { drawerOpen: boolean }> {
+  constructor (props: { title: string }) {
     super(props)
     this.state = {
       drawerOpen: false
     }
   }
-  state: State
   componentDidMount = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(err => console.error('Service worker registration failed', err))

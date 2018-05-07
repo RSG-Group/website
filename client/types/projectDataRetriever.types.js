@@ -12,13 +12,3 @@ export type Card = {
   controls: Array<Button>,
   buttonSpacing: string
 }
-export type allCards = Array<Card>
-export type allCardsQuery = {
-  loading?: boolean,
-  error?: string,
-  allCards: allCards
-}
-// Define prop types.
-export type Props = {
-  allCardsQuery: allCardsQuery
-}
