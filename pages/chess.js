@@ -8,7 +8,7 @@ import Header from '../client/ui/header'
 // Beware the ugly and unmaintainable code that the following code shall link to. BEWARE.
 export default () => (
   <div>
-    <Header title='Chess - RSG-Group' />
+    <Header title='Chess - RSG' />
     {/* Unmaintable code linked here. */}
     <iframe src='/static/chess/index.html' height='580px' width='100%' frameBorder='0' title='Chess Game' />
   </div>
