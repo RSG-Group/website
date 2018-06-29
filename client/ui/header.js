@@ -1,11 +1,13 @@
-// @flow
 // Get React and Head to populate <head />
 import React from 'react'
 import Head from 'next/head'
 
 // Import material-ui and all icons.
-import {AppBar, Toolbar, Typography as Text, IconButton, Button, Drawer, List, ListItem, ListItemText} from 'material-ui'
+import {
+  AppBar, Toolbar, Typography as Text, IconButton, Button, Drawer, List, ListItem, ListItemText
+} from '@material-ui/core'
 import GitHubLogo from './github-logo'
+import { string } from 'prop-types'
 import MenuIcon from '@material-ui/icons/Menu'
 
 // Import Link from Next.js
@@ -14,24 +16,15 @@ import Link from 'next/link'
 // Import package.json for trueVersion.
 import { trueVersion } from '../../package.json'
 
-// Declare navigator!
-declare var navigator: Object
-
 // Write our page header.
-export default class Header extends React.Component<{ title: string }, { drawerOpen: boolean }> {
-  constructor (props: { title: string }) {
+export default class Header extends React.Component {
+  constructor (props) {
     super(props)
     this.state = {
       drawerOpen: false
     }
   }
-  componentDidMount = () => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(err => console.error('Service worker registration failed', err))
-    } else {
-      console.log('Service worker not supported')
-    }
-  }
+
   render () {
     const closeOrOpenDrawer = () => this.setState({ drawerOpen: !this.state.drawerOpen })
     return (
@@ -48,7 +41,7 @@ export default class Header extends React.Component<{ title: string }, { drawerO
             flex: 'initial'
           }}>
             <Link prefetch href='/'><ListItem button><ListItemText primary='Home' /></ListItem></Link>
-            <Link prefetch href='/chess'><ListItem button><ListItemText primary='Chess' /></ListItem></Link>
+            <Link prefetch href='/intersection'><ListItem button><ListItemText primary='Intersection' /></ListItem></Link>
           </List>
         </Drawer>
         <AppBar position='fixed' style={{
@@ -80,3 +73,5 @@ export default class Header extends React.Component<{ title: string }, { drawerO
     )
   }
 }
+
+Header.propTypes = { title: string }

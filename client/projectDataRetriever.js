@@ -1,66 +1,22 @@
-// @flow
 // Import React.
 import React from 'react'
 
-// Query our Apollo Server w/ React Apollo.
-import { gql } from 'apollo-boost'
-import { Query } from 'react-apollo'
-
-// Get Material-UI.
-import { Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Button } from 'material-ui'
-
-// Import Link from Next.js.
+// Get Material-UI, Link from Next.js and our project cards..
+import {
+  Typography as Text, Grid, Card, CardContent, CardMedia, CardActions, Button
+} from '@material-ui/core'
 import Link from 'next/link'
-
-// Query for allCards without their IDs as they are unnecessary.
-const CARDS_QUERY = gql`
-  query AllCardsQuery {
-    allCards {
-      title
-      description
-      image
-      controls {
-        title
-        link
-        internalLink
-      }
-    }
-  }
-`
+import data from './projects'
 
 // Create a React Component.
-export default class Projects extends React.Component<{}> {
-  render () {
-    // The error.
-    const Error = (props) =>
-      <Text type='title'>Error while loading data ({props.error}). Try reloading the page.</Text>
-    return (
-      <Grid container>
-        <Query query={CARDS_QUERY}>
-          {({ loading, error, data }) => {
-            // If the data is loading or there is an error.
-            if (error) return <Error error={error} />
-            if (loading || !data) return <Text type='title'>Loading.</Text>
-            return data.allCards.map(card => (this.processCard(card)))
-          }}
-        </Query>
-      </Grid>
-    )
-  }
+export default class Projects extends React.Component {
+  render () { return <Grid container>{data.map(card => (this.processCard(card)))}</Grid> }
 
-  processCard (card: {
-    image: Array<string>, title: string, description: string, controls: Array<{
-      title: string, link: string
-    }>
-  }) {
+  processCard (card) {
     // If Image is there..
     const Image = () => card.image ? (
       <CardMedia style={{ textAlign: 'center' }}>
-        <img
-          src={card.image[0]}
-          alt={card.image[1]}
-          style={{ height: 137 }}
-        />
+        <img src={card.image[0]} alt={card.image[1]} style={{ height: 137 }} />
       </CardMedia>
     ) : ''
     // Setup CreateButton to create buttons.
@@ -69,14 +25,9 @@ export default class Projects extends React.Component<{}> {
         ? <Link href={button.link} prefetch><Button dense color='primary'>{button.title}</Button></Link>
         : (
           <Button
-            dense
-            color='primary'
-            target='_blank'
-            rel='noopener noreferrer'
-            href={button.link}
-            key={button.title}
-          >{button.title}
-          </Button>
+            dense color='primary' target='_blank'
+            rel='noopener noreferrer' href={button.link} key={button.title}
+          >{button.title}</Button>
         )
     )
     // Return a card.

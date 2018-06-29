@@ -6,7 +6,7 @@ import React from 'react'
 import Header from '../client/ui/header'
 
 // Export our final page.
-export default () => (
+export const Intersection = () => (
   <div>
     <Header title='RSG' />
     <h1>Extras - line-intersection</h1>
@@ -17,3 +17,4 @@ export default () => (
     </a></p>
   </div>
 )
+export default Intersection
