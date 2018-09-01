@@ -13,7 +13,6 @@ class MyDocument extends Document {
       <html lang='en' dir='ltr'>
         <Head>
           <link rel='icon' href='/static/favicon.ico' alt='' />
-          <link rel='manifest' href='/static/manifest.json' />
           <meta charSet='utf-8' />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta

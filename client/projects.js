@@ -66,7 +66,7 @@ module.exports = [
       id: 3,
       title: 'Demo',
       link: '/chess',
-      internalLink: true
+      internalLink: false
     }]
   }, {
     id: 4,
