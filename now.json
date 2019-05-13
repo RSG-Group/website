@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "alias": ["rsg-group"],
+  "github": {
+    "autoAlias": false
+  }
+}
