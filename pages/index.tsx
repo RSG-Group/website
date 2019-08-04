@@ -2,11 +2,13 @@ import * as React from 'react'
 
 import { AppBar, Toolbar, Typography, Button, IconButton, SvgIcon } from '@material-ui/core'
 
+import Project from '../imports/project'
+
 const Index = () => (
   <>
     <AppBar>
       <Toolbar>
-        <Typography variant='title' color='inherit'>RSG</Typography>
+        <Typography variant='h6' color='inherit'>RSG</Typography>
         <div style={{ flex: 1 }} />
         <Button
           title='Fork me on GitHub'
@@ -21,6 +23,34 @@ const Index = () => (
         </a>
       </Toolbar>
     </AppBar>
+    <br /><br /><br /><br />
+    <Project
+      name='hyper-background'
+      image='https://avatars1.githubusercontent.com/u/28014500?s=200&v=4'
+      description='Easily change the background of your Hyper terminal! Technically the first plugin and the whole and sole easy way to do this 😝 Fun fact: We boilerplated and wrote hyper-background in 2 hours. And it worked the first time.'
+      buttons={[
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' },
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' }
+      ]}
+    />
+    <Project
+      name='hyper-background'
+      image='https://avatars1.githubusercontent.com/u/28014500?s=200&v=4'
+      description='Easily change the background of your Hyper terminal! Technically the first plugin and the whole and sole easy way to do this 😝 Fun fact: We boilerplated and wrote hyper-background in 2 hours. And it worked the first time.'
+      buttons={[
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' },
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' }
+      ]}
+    />
+    <Project
+      name='hyper-background'
+      image='https://avatars1.githubusercontent.com/u/28014500?s=200&v=4'
+      description='Easily change the background of your Hyper terminal! Technically the first plugin and the whole and sole easy way to do this 😝 Fun fact: We boilerplated and wrote hyper-background in 2 hours. And it worked the first time.'
+      buttons={[
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' },
+        { name: 'GitHub', url: 'https://github.com/retrixe/hyper-background' }
+      ]}
+    />
   </>
 )
 

@@ -14,7 +14,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx && tsc"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^4.3.1",
     "next": "^9.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
